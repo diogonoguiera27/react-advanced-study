@@ -10,6 +10,7 @@ import Challenge from './components/Challenge';
 // Styles / css
 import './App.css';
 import ListRender from './components/ListRender';
+import ConditionalRender from './components/ConditionalRender';
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Events/>
       <Challenge/>
       <ListRender/>
+      <ConditionalRender/>
     </div>
   );
 }
