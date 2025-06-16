@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+//Components
+// importação isso e a maneira de reutilizar o components que foram criados em arquivos separados  
+// beneficios conseguimos manter oa interface organizasdas
+// sintaxe :  import nome do arquivo ( deve esta com a Primeira letra Maiucsular ) from './components/FristComponents'--> (Caminho Relativo: ate o arquivo onmde esta salvo );
+import FristComponents from './components/FristComponents';
+import TemplateExpressions from './components/TemplateExpressions';
+import MyComponents from './components/MyComponents';
+import Events from './components/Events';
+import Challenge from './components/Challenge';
+// Styles / css
 import './App.css';
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> Fundamentos React </h1>
+      <FristComponents/>
+      <TemplateExpressions />
+      <MyComponents/>
+      <Events/>
+      <Challenge/>
     </div>
   );
 }
