@@ -11,12 +11,16 @@ import Challenge from './components/Challenge';
 import './App.css';
 import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
+import ShowUserName from './components/ShowUserName';
+import { useState } from 'react';
 
 
 
 
 
 function App() {
+  const name = "Lucas"
+  const [userName] = useState('Maria')
   return (
     <div className="App">
       <h1> Fundamentos React </h1>
@@ -27,6 +31,7 @@ function App() {
       <Challenge/>
       <ListRender/>
       <ConditionalRender/>
+      <ShowUserName name={userName}/>
     </div>
   );
 }
