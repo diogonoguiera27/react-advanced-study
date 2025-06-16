@@ -13,6 +13,7 @@ import ListRender from './components/ListRender';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import { useState } from 'react';
+import CarDetails from './components/CarDetails';
 
 
 
@@ -32,6 +33,7 @@ function App() {
       <ListRender/>
       <ConditionalRender/>
       <ShowUserName name={userName}/>
+      <CarDetails brand="vw" km={10000} cor="azul"/>
     </div>
   );
 }
