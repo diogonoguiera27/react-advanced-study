@@ -9,6 +9,7 @@ import Events from './components/Events';
 import Challenge from './components/Challenge';
 // Styles / css
 import './App.css';
+import ListRender from './components/ListRender';
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <MyComponents/>
       <Events/>
       <Challenge/>
+      <ListRender/>
     </div>
   );
 }
