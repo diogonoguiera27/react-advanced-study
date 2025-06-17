@@ -14,7 +14,8 @@ import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import {  useState } from "react";
 import CarDetails from "./components/CarDetails";
-import Fragment from "./components/fragment"
+import Fragment from './components/Fragment';
+import Container from "./components/container";
 
 function App() {
   //const name = "Lucas";
@@ -50,7 +51,12 @@ function App() {
         />
       ))}
       {/* fragment */}
-      <Fragment propFragment="test"/>
+     {/* <Fragment propFragment="test"/>*/}
+
+      {/* children*/}
+      <Container  myValue="testing">
+        <p>este e o Conteudo  </p>
+      </Container>
     </div>
   );
 }
