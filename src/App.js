@@ -14,8 +14,9 @@ import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import {  useState } from "react";
 import CarDetails from "./components/CarDetails";
-import Fragment from './components/Fragment';
+//import Fragment from './components/Fragment';
 import Container from "./components/container";
+import ExecuteFunction from "./components/ExecuteFunction";
 
 function App() {
   //const name = "Lucas";
@@ -26,6 +27,10 @@ function App() {
     { id: 2, brand: "gol", color: "branco", km: 2500, newCar: false },
     { id: 3, brand: "uno", color: "vinho", km: 1232, newCar: false },
   ];
+
+  function showMessage() {
+    console.log("Evento do Componete pai");
+  }
   return (
     <div className="App">
       <h1> Fundamentos React </h1>
@@ -44,6 +49,7 @@ function App() {
       {/* loop em  array  de objetos */}
       {cars.map((car) => (
         <CarDetails
+          key={car.id}
           brand={car.brand}
           color={car.color}
           km={car.km}
@@ -57,6 +63,8 @@ function App() {
       <Container  myValue="testing">
         <p>este e o Conteudo  </p>
       </Container>
+
+      <ExecuteFunction myFunction={showMessage}/>
     </div>
   );
 }
