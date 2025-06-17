@@ -12,13 +12,14 @@ import "./App.css";
 import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
-import {  useState } from "react";
+import { useState } from "react";
 import CarDetails from "./components/CarDetails";
 //import Fragment from './components/Fragment';
 import Container from "./components/container";
 import ExecuteFunction from "./components/ExecuteFunction";
 import Message from "./components/Message";
 import ChangeMessageState from "./components/ChangeMessageState";
+import UserDetails from "./components/UserDetails";
 
 function App() {
   //const name = "Lucas";
@@ -34,11 +35,18 @@ function App() {
     console.log("Evento do Componete pai");
   }
 
-  const [message,setMessage] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleMessage = (msg) =>{
-    setMessage(msg)
-  }
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
+
+  const person = [
+    { id: 1, name: "Diogo", age: 20, profession: "Desenvolvedor" },
+    { id: 2, name: "lucas", age: 26, profession: "pintor" },
+    { id: 3, name: "Guilherme", age: 19, profession: "Pedreiro" },
+    { id: 4, name: "Miguel", age: 16, profession: "Estudante" },
+  ];
 
   return (
     <div className="App">
@@ -66,17 +74,25 @@ function App() {
         />
       ))}
       {/* fragment */}
-     {/* <Fragment propFragment="test"/>*/}
+      {/* <Fragment propFragment="test"/>*/}
 
       {/* children*/}
-      <Container  myValue="testing">
-        <p>este e o Conteudo  </p>
+      <Container myValue="testing">
+        <p>este e o Conteudo </p>
       </Container>
 
-      <ExecuteFunction myFunction={showMessage}/>
+      <ExecuteFunction myFunction={showMessage} />
 
-      <Message msg={message}/>
-      <ChangeMessageState handleMessage={handleMessage}/>
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
+      {person.map((pessoa) => (
+        <UserDetails
+          key={pessoa.id}
+          name={pessoa.name}
+          age={pessoa.age}
+          profession={pessoa.profession}
+        />
+      ))}
     </div>
   );
 }
