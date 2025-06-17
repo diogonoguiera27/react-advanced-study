@@ -17,6 +17,8 @@ import CarDetails from "./components/CarDetails";
 //import Fragment from './components/Fragment';
 import Container from "./components/container";
 import ExecuteFunction from "./components/ExecuteFunction";
+import Message from "./components/Message";
+import ChangeMessageState from "./components/ChangeMessageState";
 
 function App() {
   //const name = "Lucas";
@@ -31,6 +33,13 @@ function App() {
   function showMessage() {
     console.log("Evento do Componete pai");
   }
+
+  const [message,setMessage] = useState("");
+
+  const handleMessage = (msg) =>{
+    setMessage(msg)
+  }
+
   return (
     <div className="App">
       <h1> Fundamentos React </h1>
@@ -65,6 +74,9 @@ function App() {
       </Container>
 
       <ExecuteFunction myFunction={showMessage}/>
+
+      <Message msg={message}/>
+      <ChangeMessageState handleMessage={handleMessage}/>
     </div>
   );
 }
