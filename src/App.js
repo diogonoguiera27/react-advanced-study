@@ -12,11 +12,12 @@ import "./App.css";
 import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
-import { useState } from "react";
+import {  useState } from "react";
 import CarDetails from "./components/CarDetails";
+import Fragment from "./components/fragment"
 
 function App() {
-  const name = "Lucas";
+  //const name = "Lucas";
   const [userName] = useState("Maria");
 
   const cars = [
@@ -48,6 +49,8 @@ function App() {
           newCar={car.newCar}
         />
       ))}
+      {/* fragment */}
+      <Fragment propFragment="test"/>
     </div>
   );
 }
