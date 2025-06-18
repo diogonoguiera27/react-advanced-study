@@ -27,6 +27,7 @@ function App() {
   const [Diogo] = useState("Diogo");
   //const name = "Lucas";
   const [userName] = useState("Maria");
+  const redTitle = true
 
   const cars = [
     { id: 1, brand: "Ferrari", color: "vermelha", km: 0, newCar: true },
@@ -112,6 +113,10 @@ function App() {
 
       <h2 style={Diogo === "Diogo" ?{ color: "Green" , backgroundColor:"#000" } : null}>
         teste nome 
+      </h2>
+
+      <h2 className={redTitle ? "red-title":"tile"}>
+        este titulo vair ter a classe dinamica
       </h2>
     </div>
   );
