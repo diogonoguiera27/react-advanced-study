@@ -23,6 +23,8 @@ import UserDetails from "./components/UserDetails";
 import CssComponents from "./components/CssComponents";
 
 function App() {
+  const n = 10;
+  const [Diogo] = useState("Diogo");
   //const name = "Lucas";
   const [userName] = useState("Maria");
 
@@ -96,11 +98,21 @@ function App() {
       ))}
       <h1>React com Css </h1>
 
-      <CssComponents/>
+      <CssComponents />
       <p>este e um paragrafo e do app.js</p>
       <p className="my-comp-paragraph">este tambem e do componete </p>
 
-      <p style={{color:"blue", padding:"25px", borderTop:"2px solid red"}}>este elemento foi estilizado de forma inline</p>
+      <p style={{ color: "blue", padding: "25px", borderTop: "2px solid red" }}>
+        este elemento foi estilizado de forma inline
+      </p>
+
+      <h2 style={n < 10 ? { color: "purple" } : { color: "pink" }}>
+        css dinamico
+      </h2>
+
+      <h2 style={Diogo === "Diogo" ?{ color: "Green" , backgroundColor:"#000" } : null}>
+        teste nome 
+      </h2>
     </div>
   );
 }
