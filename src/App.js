@@ -20,6 +20,7 @@ import ExecuteFunction from "./components/ExecuteFunction";
 import Message from "./components/Message";
 import ChangeMessageState from "./components/ChangeMessageState";
 import UserDetails from "./components/UserDetails";
+import CssComponents from "./components/CssComponents";
 
 function App() {
   //const name = "Lucas";
@@ -94,6 +95,10 @@ function App() {
         />
       ))}
       <h1>React com Css </h1>
+
+      <CssComponents/>
+      <p>este e um paragrafo e do app.js</p>
+      <p className="my-comp-paragraph">este tambem e do componete </p>
     </div>
   );
 }
