@@ -99,6 +99,8 @@ function App() {
       <CssComponents/>
       <p>este e um paragrafo e do app.js</p>
       <p className="my-comp-paragraph">este tambem e do componete </p>
+
+      <p style={{color:"blue", padding:"25px", borderTop:"2px solid red"}}>este elemento foi estilizado de forma inline</p>
     </div>
   );
 }
