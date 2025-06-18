@@ -21,7 +21,7 @@ import Message from "./components/Message";
 import ChangeMessageState from "./components/ChangeMessageState";
 import UserDetails from "./components/UserDetails";
 import CssComponents from "./components/CssComponents";
-
+import Title from "./components/Title";
 function App() {
   const n = 10;
   const [Diogo] = useState("Diogo");
@@ -118,6 +118,8 @@ function App() {
       <h2 className={redTitle ? "red-title":"tile"}>
         este titulo vair ter a classe dinamica
       </h2>
+
+      <Title/>
     </div>
   );
 }
